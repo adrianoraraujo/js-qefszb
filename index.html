@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #4CAF50;
+}
+</style>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+	<div class="jumbotron text-center">
+	  <h1>Diagnóstico on-line Covid-19</h1>
+	  <p>Fique em casa, não deixe o vírus nos vencer!</p>
+	</div>
+</div>
+	<div class="container" style="width:800px">
+		<div class="row" style="width:500px; height:100">
+			<p class="h4">Covid-19 por Estados Brasileiros</p>
+		</div>
+		<div class="row" style="width:500px; height:100">
+			<p class="h4">Nº de Infectados</p><br/><br/>
+		</div>
+
+		<div class="row" style="width:500px; height:100">
+	
+			<h5 class="display-muted">Total 78.162</h5>
+		</div>
+	<!-- Bahia 2246, Ceará 7267, Amazonas 4081, Acre 354, Alagoas 957, DF 1257, São Paulo 26158  total 78162 -->
+
+
+	Bahia<div class="progress">
+		<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:15%">
+		2.246
+		</div>
+	</div> 
+
+	Ceará<div class="progress">
+		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:22%">
+		7.267
+		</div>
+	</div> 
+
+	Amazonas<div class="progress">
+		<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:18%">
+		4.081
+		</div>
+	</div> 
+
+	São Paulo<div class="progress">
+		<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:47%">
+		26.158
+		</div>
+	</div> 
+
+	Rio de Janeiro<div class="progress">
+		<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:24%">
+		8.869
+		</div>
+	</div> 
+
+	Pernambuco<div class="progress">
+		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+		6.194
+		</div>
+	</div> 
+
+	Santa Catarina<div class="progress">
+		<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:15%">
+		1.995
+		</div>
+	</div> 
+
+	</div>
+	<div class="container" style="width: 800px">
+		<h3  id="showW"class="alert alert-warning" hidden="true"role="alert" >Busque um ponto de coleta para realizar o exame do COVID-19!</h3>
+	<h3  id="showD"class="alert alert-danger" hidden="true"role="alert" >Procure uma emergência especializada ou um hospital de campanha!</h3>
+	<h3  id="showI"class="alert alert-info" hidden="true"role="alert" >Deve ficar em isolamento!</h3>
+	<h3  id="showP"class="alert alert-sucess" hidden="true"role="alert" >Fique em casa, não se contamine!</h3>
+	</div>
+
+	<div class="container" style="background-color:lightgray;  width:800px">
+		<div class="row" style="height:60px; width:800px"></div>
+
+		<div class="row" style="height:400px; width:800px">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10">
+			<form class="form" action="">
+			    <div class="form-group">
+	     			<label for="text-center">1)Realizou alguma viagem internacional nos últimos dias?</label><br/>
+					<label class="radio-inline"><input type="radio" name="optradio1" value="1" checked="checked">Sim</label>
+					<label class="radio-inline"><input type="radio" name="optradio1" value="2" >Não</label>
+				</div>
+			    <div class="form-group">
+	     			<label for="text-center">1)Teve contato com alguém que realizou alguma viagem internacional?</label><br/>
+					<label class="radio-inline"><input type="radio" name="optradio2" value="1" checked="checked">Sim</label>
+					<label class="radio-inline"><input type="radio" name="optradio2" value="2">Não</label>
+				</div>
+				<div class="form-group">
+	     			<label for="text-center">1Com quantas pessoas teve contato nos últimos 15 dias?</label><br/>
+					<label class="radio-inline"><input type="radio" name="optradio3" value="1"checked="checked">0-10</label>
+					<label class="radio-inline"><input type="radio" name="optradio3" value="2">11-20</label>
+					<label class="radio-inline"><input type="radio" name="optradio3" value="3">>20</label>
+				</div>
+				<div class="form-group">
+	     			<label for="text-center">1)Possui algum dos sintomas?</label><br/>
+					<label class="checkbox-inline"><input type="checkbox" name="sintomas" value="1" checked="">Tosse</label>
+					<label class="checkbox-inline"><input type="checkbox" name="sintomas" value="2" checked="">Febre</label>
+					<label class="checkbox-inline"><input type="checkbox" name="sintomas" value="3" checked="">Cansaço</label>
+					<label class="checkbox-inline"><input type="checkbox" name="sintomas" value="4" checked="">Dificuldade Respiratória</label>
+				</div>
+				
+			
+			  </form><br/>
+			  <div class="row">
+			  <button class="btn btn-info center-block" style="width: 100px; height: 35px" onclick="move()">Verificar</button>
+			</div>
+			  <div class="row">
+			  	<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+	</div>
+			</div>
+			<div class="col-md-1">
+			</div>
+			</div>
+		</div>
+	</div>	        
+
+	    
+
+	    <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
+	    <footer>
+	    </footer>
+	  </body>
+	</html>
